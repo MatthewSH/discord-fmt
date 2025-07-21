@@ -44,9 +44,18 @@ export function link(text: string, url: string) {
   return `[${text}](${url})`;
 }
 
+export function noEmbedLink(url: string) {
+  return `<${url}>`;
+}
+
 export function quote(text: string) {
   text = escape(text);
   return `> ${text}`;
+}
+
+export function blockQuote(text: string) {
+  text = escape(text);
+  return `>>> ${text}`;
 }
 
 export function list(...items: string[]) {
