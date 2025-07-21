@@ -170,7 +170,7 @@ export function timestamp(
 //#region Utility functions
 function header(text: string, level: number = 1): string {
   if (level < 1 || level > 3) {
-    throw new Error("Header level must be between 1 and 6");
+    throw new Error("Header level must be between 1 and 3");
   }
   return `${"#".repeat(level)} ${text}`;
 }
