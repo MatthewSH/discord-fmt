@@ -88,7 +88,83 @@ export function codeBlock(text: string, language?: string) {
 //#endregion
 
 //#region Specialty formatting
+export function user(userId: string | bigint): string {
+  if (typeof userId === "bigint") {
+    userId = userId.toString();
+  }
 
+  return `<@${userId}>`;
+}
+
+export function channel(channelId: string | bigint): string {
+  if (typeof channelId === "bigint") {
+    channelId = channelId.toString();
+  }
+
+  return `<#${channelId}>`;
+}
+
+export function role(roleId: string | bigint): string {
+  if (typeof roleId === "bigint") {
+    roleId = roleId.toString();
+  }
+
+  return `<@&${roleId}>`;
+}
+
+export function email(email: string): string {
+  return `<${email}>`;
+}
+
+export function phone(phone: string): string {
+  return `<+${phone}>`;
+}
+
+export function emoji(
+  emojiName: string,
+  emojiId: string | bigint,
+  animated: boolean = false,
+): string {
+  if (typeof emojiId === "bigint") {
+    emojiId = emojiId.toString();
+  }
+
+  return `<${animated ? "a" : ""}:${emojiName}:${emojiId}>`;
+}
+
+export enum GuildNavigation {
+  Customize = "customize",
+  Browse = "browse",
+  Guide = "guide",
+  LinkedRoles = "linked-roles",
+}
+
+export function guildNavigation(
+  to: GuildNavigation | `${GuildNavigation}`,
+): string {
+  if (!Object.values(GuildNavigation).includes(to as GuildNavigation)) {
+    throw new Error("Invalid guild navigation type");
+  }
+
+  return `<id:${to}>`;
+}
+
+export enum TimestampStyle {
+  ShortTime = "t",
+  LongTime = "T",
+  ShortDate = "d",
+  LongDate = "D",
+  ShortDateTime = "f",
+  LongDateTime = "F",
+  RelativeTime = "R",
+}
+
+export function timestamp(
+  epoch: string,
+  style: TimestampStyle | `${TimestampStyle}` = TimestampStyle.ShortDateTime,
+): string {
+  return `<t:${epoch}:${style}>`;
+}
 //#endregion
 
 //#region Utility functions
