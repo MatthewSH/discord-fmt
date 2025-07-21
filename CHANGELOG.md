@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/MatthewSH/discord-fmt/compare/v1.0.0...v1.0.1) (2025-07-21)
+
+
+### Bug Fixes
+
+* only escape needed characters ([f2548b6](https://github.com/MatthewSH/discord-fmt/commit/f2548b69347a9ba37d420ee9cbe5efca460d823a))
+
 ## 1.0.0 (2025-07-21)
 
 
