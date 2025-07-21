@@ -19,6 +19,11 @@ export function underline(text: string) {
   return `__${text}__`;
 }
 
+export function spoiler(text: string) {
+  text = escape(text);
+  return `||${text}||`;
+}
+
 export function h1(text: string) {
   text = escape(text);
   return header(text, 1);
@@ -79,11 +84,6 @@ export function codeBlock(text: string, language?: string) {
   }
 
   return `\`\`\`\n${text}\n\`\`\``;
-}
-
-export function spoiler(text: string) {
-  text = escape(text);
-  return `||${text}||`;
 }
 //#endregion
 
