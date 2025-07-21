@@ -71,6 +71,15 @@ export function codeBlock(text: string, language?: string) {
 
   return `\`\`\`\n${text}\n\`\`\``;
 }
+
+export function spoiler(text: string) {
+  text = escape(text);
+  return `||${text}||`;
+}
+//#endregion
+
+//#region Specialty formatting
+
 //#endregion
 
 //#region Utility functions
