@@ -356,6 +356,6 @@ function escape(text: string): string {
     return "";
   }
 
-  return text.replace(/([*_~|\\`>#\-+!.()])/g, "\\$1");
+  return text.replace(/([*_~])/g, "\\$1");
 }
 //#endregion
