@@ -1,0 +1,59 @@
+{
+  "name": "discord-fmt",
+  "version": "1.0.0",
+  "description": "A simple library to return Markdown formatted strings for Discord while being framework agnostic.",
+  "keywords": [
+    "discord",
+    "formatting",
+    "markdown",
+    "tool",
+    "utility"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "matthewh",
+    "email": "matthatcher@pm.me",
+    "url": "https://matthewhatcher.com/"
+  },
+  "homepage": "https://github.com/MatthewSH/discord-fmt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthewSH/discord-fmt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatthewSH/discord-fmt/issues"
+  },
+  "scripts": {
+    "build": "pkgroll --clean-dist --sourcemap --env.__PACKAGE_VERSION__=$npm_package_version"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-conventional": "19.8.1",
+    "@types/node": "24.0.7",
+    "lefthook": "1.11.14",
+    "tsx": "4.20.3"
+  },
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
+}
