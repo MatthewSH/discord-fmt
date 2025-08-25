@@ -52,7 +52,7 @@
     "@commitlint/cli": "19.8.1",
     "@commitlint/config-conventional": "19.8.1",
     "@types/node": "24.0.15",
-    "lefthook": "1.12.2",
+    "lefthook": "1.12.3",
     "pkgroll": "2.14.3",
     "tsx": "4.20.3"
   },
